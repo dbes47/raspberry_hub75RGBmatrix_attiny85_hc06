@@ -42,7 +42,8 @@ class SampleBase(object):
         options.rows = 32
         options.cols = 64
         options.chain_length = 2
-        options.gpio_slowdown =1
+        options.gpio_slowdown =3
+        options.pwm_lsb_nanoseconds=170
         if self.args.led_gpio_mapping != None:
             options.hardware_mapping = 'adafruit-hat'
             options.rows = 32

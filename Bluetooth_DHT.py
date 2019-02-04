@@ -25,7 +25,10 @@ class Bluetooth_DHTxx:
         print('parcing thread start')
         while 1:
             data=self.sock.recv(1024)
-            temp=data.decode('utf-8')
+            try:
+                temp=data.decode('utf-8')
+            except:
+                print("can't decode recieved data to utf-8")
             temp=BeautifulSoup(temp,"html.parser")
             _hum=temp.find('hum')
             _temp=temp.find('temp')
