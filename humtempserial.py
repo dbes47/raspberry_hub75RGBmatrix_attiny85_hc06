@@ -6,7 +6,7 @@ import threading
 class HumTempSerial:
     def __init__(self):
         #bluetooth class
-        self.rs=RemoteSwitch()
+        #self.rs=RemoteSwitch()
         self.rs.make_connection()
         #call serial comm start
         self.cooked_data='Loading...'
